@@ -23,9 +23,8 @@ from org.orekit.propagation.analytical.tle import TLE, TLEPropagator
 from org.hipparchus.ode.nonstiff import DormandPrince853Integrator
 from org.hipparchus.geometry.euclidean.threed import Vector3D, Rotation
 
-from satellite import Satellite
-from scenario import Scenario
-from rso import RSO
+from objects import Scenario, Satellite, RSO
+
 ## Setup frames and time
 # J2000 frame
 EME2000 = FramesFactory.getEME2000()
