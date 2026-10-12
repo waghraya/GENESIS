@@ -9,4 +9,4 @@ To use it, a JDK (11+) must be added as an environment variable including a JAVA
 
 TODO:
   1) Attitude Propagation
-  2) Receive Outputs from STK
+  2) Receive Outputs from STK (TYLER: Make test files for Avi to run STK on his computer?)
