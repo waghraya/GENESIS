@@ -1,0 +1,16 @@
+# Simulation and STK outputs (large, regenerated on every run)
+Outputs/
+Verification/STK_Results/
+
+# Space-Track data: its user agreement restricts redistribution (regenerate with SpaceTrack/convert_space_track.py)
+SpaceTrack/space_track_geo.json
+Inputs/GEOTLE.json
+
+# Texture the MATLAB orbit plot downloads on first run
+earth_texture.jpg
+
+# Python and OS files
+__pycache__/
+*.pyc
+.venv/
+.DS_Store

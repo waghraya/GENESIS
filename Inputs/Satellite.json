@@ -1,20 +1,19 @@
 {
   "satellite": {
-    "name": "[INSERT_SAT_NAME_HERE]",
+    "name": "GENESIS",
     "id": "11111",
     "international_designator": "[INSERT_SAT_NAME_HERE]"
   },
-  "epoch": "2026-01-01T00:00:00",
   "orbit": {
     "type": "keplerian",
     "frame": "GCRF",
     "elements": {
-      "semi_major_axis_km": 42134.0,
-      "eccentricity": 0.001,
-      "inclination_deg": 2.0,
-      "raan_deg": 10.0,
-      "arg_of_perigee_deg": 20.0,
-      "true_anomaly_deg": 40.0
+      "semi_major_axis_km": 42464.0,
+      "eccentricity": 0.005,
+      "inclination_deg": 1.0,
+      "raan_deg": 0.0,
+      "arg_of_perigee_deg": 0.0,
+      "start_longitude_deg": -114.7
     }
   },
   "physical_properties": {
@@ -25,8 +24,32 @@
     "srp_area_m2": 1.0
   },
   "propagator": {
-    "step_size_s": 60,
-    "duration_days": 3,
-    "force_models": ["j2", "drag", "third_body_sun", "third_body_moon", "srp"]
+    "gravity_degree": 8,
+    "gravity_order": 8,
+    "force_models": ["earth_gravity", "third_body_sun", "third_body_moon", "srp", "drag"]
+  },
+  "attitude": {
+    "inertia_kg_m2": [[0.12, 0.0, 0.0], [0.0, 0.10, 0.0], [0.0, 0.0, 0.05]],
+    "initial_quaternion": [1.0, 0.0, 0.0, 0.0],
+    "initial_angular_velocity_deg_s": [0.0, 0.0, 0.0],
+    "target_rso": "TITAN_3C_TRANSTAGE_DEB_38704",
+    "controller": {
+      "natural_frequency_rad_s": 0.1,
+      "damping_ratio": 0.7
+    },
+    "reaction_wheels": {
+      "max_torque_Nm": 0.005,
+      "max_momentum_Nms": 0.03
+    },
+    "knowledge_error": {
+      "attitude_arcsec": 10.0,
+      "rate_deg_s": 0.0001,
+      "seed": 1
+    },
+    "disturbance_torques": {
+      "gravity_gradient": true,
+      "srp": true,
+      "center_of_pressure_offset_m": [0.0, 0.0, 0.01]
+    }
   }
 }

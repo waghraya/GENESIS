@@ -1,6 +1,8 @@
 {
   "name": "TEST_CASE_1",
-  "epoch": "2026-01-01T00:00:00Z",
+  "epoch": "2026-10-14T00:00:00Z",
   "duration_days": 3,
-  "time_step_s": 5
+  "time_step_s": 5,
+  "rso_step_s": 60,
+  "rso_file": "RSO.json"
 }
